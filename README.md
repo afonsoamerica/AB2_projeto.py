@@ -1,4 +1,39 @@
+# 🏭 Implementação do Padrão Factory nos Controllers
+
+## 📌 Objetivo
+Refatorar os controllers `ContactController` e `LeadController` utilizando o **Padrão Factory** para:
+- Centralizar a criação de objetos
+- Encapsular regras de validação
+- Promover código mais limpo e manutenível
+
+## 🧩 O que foi Implementado
+
+### 🏗️ Factories Criadas
+| Arquivo               | Classe          | Responsabilidade                          |
+|-----------------------|-----------------|------------------------------------------|
+| `factories/contact_factory.py` | `ContactFactory` | Cria e valida objetos `Contact`          |
+| `factories/lead_factory.py`    | `LeadFactory`    | Cria e valida objetos `Lead`             |
+
+### 🔄 Métodos Refatorados
+| Controller           | Método Refatorado | Mudança Principal                        |
+|----------------------|-------------------|------------------------------------------|
+| `ContactController`  | `add_contact()`   | Usa `ContactFactory.create_contact()`    |
+| `LeadController`     | `add_lead()`      | Usa `LeadFactory.create_lead()`          |
+
+## 💎 Benefícios
+
+```diff
++ ✅ Desacoplamento: Controllers não conhecem detalhes de criação de objetos
++ ✅ Single Responsibility: Validações centralizadas nas factories
++ ✅ Flexibilidade: Fácil adição de novos tipos de objetos
++ ✅ Manutenção: Mudanças afetam apenas um ponto do código
+
+
+
+
+
 # MVC CRM System - Customer Relationship Management
+
 
 ## 📋 Description
 A comprehensive CRM (Customer Relationship Management) system developed in Python using the MVC (Model-View-Controller) architecture. This system offers complete functionality for managing customer relationships, sales opportunities, marketing campaigns, and business analytics.
