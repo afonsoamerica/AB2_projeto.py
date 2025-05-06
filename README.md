@@ -22,7 +22,7 @@ Refatoramento dos controllers `ContactController` e `LeadController` utilizando 
 
 ## 💎 Benefícios
 
-```diff
+
 + ✅ Desacoplamento: Controllers não conhecem detalhes de criação de objetos
 + ✅ Single Responsibility: Validações centralizadas nas factories
 + ✅ Flexibilidade: Fácil adição de novos tipos de objetos
@@ -32,7 +32,7 @@ Refatoramento dos controllers `ContactController` e `LeadController` utilizando 
 
 
 
-## MVC CRM System - Customer Relationship Management
+# MVC CRM System - Customer Relationship Management
 
 
 ## 📋 Description
