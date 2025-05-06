@@ -1,7 +1,7 @@
 # 🏭 Implementação do Padrão Factory nos Controllers
 
-## 📌 Objetivo
-Refatorar os controllers `ContactController` e `LeadController` utilizando o **Padrão Factory** para:
+## 📌 FEITO
+Refatoramento dos controllers `ContactController` e `LeadController` utilizando o **Padrão Factory** para:
 - Centralizar a criação de objetos
 - Encapsular regras de validação
 - Promover código mais limpo e manutenível
