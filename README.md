@@ -29,8 +29,56 @@ Refatoramento dos controllers `ContactController` e `LeadController` utilizando 
 + ✅ Manutenção: Mudanças afetam apenas um ponto do código
 
 
+.........
+# 🎛️ Implementação do Padrão Command nos Controllers
 
+## 📌 Status: **Concluído**
 
+Refatoramos o `SalesPipelineController` utilizando o **Padrão Command** com os seguintes objetivos:
+
+- ✅ Desacoplar ações da interface  
+- ✅ Flexibilizar a execução de operações  
+- ✅ Permitir extensão sem modificar o controlador principal  
+
+---
+
+## 🧩 O que foi Implementado
+
+### ⚙️ Comandos Criados
+
+| Arquivo                          | Classe                   | Responsabilidade                                |
+|----------------------------------|---------------------------|-------------------------------------------------|
+| `commands/add_opportunity.py`    | `AddOpportunityCommand`   | Encapsula lógica de adição de oportunidades     |
+| `commands/list_opportunities.py` | `ListOpportunitiesCommand`| Gerencia listagem de oportunidades              |
+| `commands/update_stage.py`       | `UpdateStageCommand`      | Controla atualização de estágios                |
+| `commands/remove_opportunity.py` | `RemoveOpportunityCommand`| Trata remoção de oportunidades                  |
+
+---
+
+### 🔄 Controller Refatorado
+
+| Arquivo                      | Mudança Principal                          |
+|------------------------------|--------------------------------------------|
+| `sales_pipeline_controller.py` | Transformado em **invocador de comandos** |
+
+---
+
+## 💎 Benefícios
+
+- 🚀 **Desacoplamento**: A camada de view não conhece a implementação das ações  
+- 🧩 **Extensibilidade**: Novos comandos podem ser adicionados sem modificar o controller  
+- 🔄 **Reusabilidade**: Comandos reutilizáveis em diferentes contextos  
+- 🧪 **Testabilidade**: Cada comando pode ser testado isoladamente  
+- ⏱️ **Flexibilidade**: Suporte futuro para filas, undo/redo e operações assíncronas  
+
+---
+
+## 🛠️ Como Usar
+
+python
+controller.execute_command('add')  # Executa AddOpportunityCommand
+
+...........................................................
 
 # MVC CRM System - Customer Relationship Management
 
